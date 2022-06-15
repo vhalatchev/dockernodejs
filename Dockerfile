@@ -18,13 +18,13 @@ COPY . .
 EXPOSE 8080
 CMD [ "npm", "start" ]
 
-FROM jenkins/jenkins:latest
+# FROM jenkins/jenkins:latest
  
-USER root
-RUN apt-get update -qq \
-      && apt-get --force-yes install -y sudo \
-      && rm -rf /var/lib/apt/lists/*
-RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
+# USER root
+# RUN apt-get update -qq \
+  #    && apt-get --force-yes install -y sudo \
+   #   && rm -rf /var/lib/apt/lists/*
+# RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
  
-USER jenkins
+# USER jenkins
 
