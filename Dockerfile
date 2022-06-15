@@ -18,7 +18,7 @@ COPY . .
 EXPOSE 8080
 CMD [ "npm", "start" ]
 
-FROM Jenkins:1.596
+FROM jenkins:1.596
  
 USER root
 RUN apt-get update \
