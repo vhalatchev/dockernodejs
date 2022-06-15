@@ -18,10 +18,10 @@ COPY . .
 EXPOSE 8080
 CMD [ "npm", "start" ]
 
-FROM jenkins:2.340
+FROM jenkins/jenkins:latest
  
 USER root
-RUN apt-get update \
+RUN apt-get update -qq \
       && apt-get --force-yes install -y sudo \
       && rm -rf /var/lib/apt/lists/*
 RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
