@@ -6,11 +6,11 @@ node {
 
         def customImage = docker.build('vihroman/dockerpush') 
 
-        customImage.push()
+        customImage.push('vihroman/dockerpush:newpush5')
 
 	// def runContainer = docker.image('vihroman/dockerpush').Run('-d -p 49160:8080')
 	
-	sh 'docker pull vihroman/dockerpush'
+	sh 'docker pull vihroman/dockerpush:newpush5'
 	sh 'docker run vihroman/dockerpush -p 49160:8080'
 
 
