@@ -11,7 +11,7 @@ node {
 	// def runContainer = docker.image('vihroman/dockerpush').Run('-d -p 49160:8080')
 	
 	// sh 'docker pull vihroman/dockerpush'
-	sh 'docker -dp run 4916:8080 vihroman/dockerpush'
+	sh 'docker run -dp 4916:8080 vihroman/dockerpush'
 
 
     }
